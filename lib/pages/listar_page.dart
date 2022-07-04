@@ -49,7 +49,7 @@ class Listar extends StatelessWidget {
                     // ),
                     child: Text(
                       "Manutenção",
-                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
                   ),
                 ),
@@ -72,7 +72,7 @@ class Listar extends StatelessWidget {
                     // ),
                     child: Text(
                       "Empilhadeira quebrou",
-                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
                   ),
                 ),
@@ -96,7 +96,7 @@ class Listar extends StatelessWidget {
                     // ),
                     child: Text(
                       "Reparar rodas",
-                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
                   ),
                 ),
