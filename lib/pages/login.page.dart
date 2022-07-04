@@ -1,4 +1,6 @@
+import 'package:appmobile/pages/home_page.dart';
 import 'package:flutter/material.dart';
+// import 'package:appmobile/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -24,32 +26,19 @@ class _LoginPageState extends State<LoginPage> {
                 height: 200,
                 child: Image.asset('assets/images/logo.png'),
               ),
-              // TextFormField(
-              //   autofocus: true,
-              //   keyboardType: TextInputType.text, //tipo de texto input
-              //   style: new TextStyle(color: Colors.grey, fontSize: 10),
-              //   decoration: InputDecoration(
-              //       labelText: "Email",
-              //       labelStyle: TextStyle(color: Colors.grey)),
-              // ),
-              // Divider(),
-              // TextFormField(
-              //   autofocus: true,
-              //   obscureText: true,
-              //   keyboardType: TextInputType.text, //tipo de texto input
-              //   style: new TextStyle(color: Colors.grey, fontSize: 10),
-              //   decoration: InputDecoration(
-              //       labelText: "Senha",
-              //       labelStyle: TextStyle(color: Colors.grey)),
-              // ),
+              //
               Container(
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey),
                   borderRadius: BorderRadius.circular(25),
-                  color: Colors.grey,
+                  color: Colors.white,
                 ),
                 child: TextField(
                   style: TextStyle(fontSize: 20, color: Colors.black),
                   decoration: InputDecoration(
+                      labelText: "Email",
+                      labelStyle: TextStyle(fontSize: 18),
                       fillColor: Colors.white,
                       contentPadding: EdgeInsets.only(
                         left: 20,
@@ -59,14 +48,20 @@ class _LoginPageState extends State<LoginPage> {
                       )),
                 ),
               ),
+              SizedBox(height: 15),
+
               Container(
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey),
                   borderRadius: BorderRadius.circular(25),
-                  color: Colors.grey,
+                  color: Colors.white,
                 ),
                 child: TextField(
                   style: TextStyle(fontSize: 20, color: Colors.black),
                   decoration: InputDecoration(
+                      labelText: "Senha",
+                      labelStyle: TextStyle(fontSize: 18),
                       fillColor: Colors.white,
                       contentPadding: EdgeInsets.only(
                         left: 20,
@@ -76,19 +71,27 @@ class _LoginPageState extends State<LoginPage> {
                       )),
                 ),
               ),
+              SizedBox(height: 15),
+
               Divider(),
               ButtonTheme(
                 height: 60.0,
-                // minWidth: 100.0,
+                // minWidth: 20.0,
                 buttonColor: Colors.white,
                 child: ElevatedButton(
-                  onPressed: () => {},
+                  onPressed: () => {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => Pagina()))
+                  },
                   child: Text(
                     "Acessar",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
+              SizedBox(height: 10),
               Text(
                 'Esqueci a senha',
                 textAlign: TextAlign.center,
