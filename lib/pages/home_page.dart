@@ -1,4 +1,5 @@
 import 'package:appmobile/pages/abrir_page.dart';
+import 'package:appmobile/pages/listar_page.dart';
 import 'package:flutter/material.dart';
 
 class Pagina extends StatelessWidget {
@@ -63,7 +64,12 @@ class Pagina extends StatelessWidget {
               color: Colors.green,
               margin: EdgeInsets.all(8.0),
               child: InkWell(
-                onTap: () {},
+                onTap: () => {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => Listar()))
+                },
                 splashColor: Colors.greenAccent,
                 child: Center(
                   child: Column(

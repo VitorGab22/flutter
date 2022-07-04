@@ -1,16 +1,17 @@
 import 'package:appmobile/pages/home_page.dart';
+import 'package:appmobile/pages/login.page.dart';
 import 'package:appmobile/pages/register.page.dart';
 import 'package:flutter/material.dart';
 // import 'package:appmobile/pages/home_page.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _RegisterPageState createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: TextField(
                   style: TextStyle(fontSize: 20, color: Colors.black),
                   decoration: InputDecoration(
-                      labelText: "Email",
+                      labelText: "Nome completo",
                       labelStyle: TextStyle(fontSize: 18),
                       fillColor: Colors.white,
                       contentPadding: EdgeInsets.only(
@@ -51,6 +52,28 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 15),
 
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.white,
+                ),
+                child: TextField(
+                  style: TextStyle(fontSize: 20, color: Colors.black),
+                  decoration: InputDecoration(
+                      labelText: "Email",
+                      labelStyle: TextStyle(fontSize: 18),
+                      fillColor: Colors.white,
+                      contentPadding: EdgeInsets.only(
+                        left: 20,
+                        top: 15,
+                        right: 20,
+                        bottom: 15,
+                      )),
+                ),
+              ),
+              SizedBox(height: 15),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 decoration: BoxDecoration(
@@ -84,42 +107,19 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) => Pagina()))
+                            builder: (BuildContext context) => LoginPage()))
                   },
                   child: Text(
-                    "Acessar",
+                    "Registrar",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
-              SizedBox(height: 15),
-              Container(
-                width: 150,
-                // height: 50,
-                child: ButtonTheme(
-                  // height: 60.0,
-                  // minWidth: 20.0,
-                  buttonColor: Colors.white,
-                  child: ElevatedButton(
-                    onPressed: () => {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  RegisterPage()))
-                    },
-                    child: Text(
-                      "Registrar",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
               SizedBox(height: 10),
-              Text(
-                'Esqueci a senha',
-                textAlign: TextAlign.center,
-              ),
+              // Text(
+              //   'Esqueci a senha',
+              //   textAlign: TextAlign.center,
+              // ),
             ],
           ),
         ),
