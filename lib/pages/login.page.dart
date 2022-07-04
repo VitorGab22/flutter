@@ -94,32 +94,37 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 15),
               Container(
-                width: 150,
+                width: 180,
                 // height: 50,
-                child: ButtonTheme(
-                  // height: 60.0,
-                  // minWidth: 20.0,
-                  buttonColor: Colors.white,
-                  child: ElevatedButton(
-                    onPressed: () => {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  RegisterPage()))
-                    },
-                    child: Text(
-                      "Registrar",
-                      style: TextStyle(color: Colors.white),
+                child: Row(
+                  children: [
+                    ButtonTheme(
+                      // height: 60.0,
+                      // minWidth: 20.0,
+                      buttonColor: Colors.white,
+                      child: ElevatedButton(
+                        onPressed: () => {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      RegisterPage()))
+                        },
+                        child: Text(
+                          "Registrar",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
                     ),
-                  ),
+                    SizedBox(height: 15),
+                    Text(
+                      'Esqueci a senha',
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 10),
-              Text(
-                'Esqueci a senha',
-                textAlign: TextAlign.center,
-              ),
             ],
           ),
         ),

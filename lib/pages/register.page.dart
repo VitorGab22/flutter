@@ -98,20 +98,22 @@ class _RegisterPageState extends State<RegisterPage> {
               SizedBox(height: 15),
 
               Divider(),
-              ButtonTheme(
-                height: 60.0,
-                // minWidth: 20.0,
-                buttonColor: Colors.white,
-                child: ElevatedButton(
-                  onPressed: () => {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) => LoginPage()))
-                  },
-                  child: Text(
-                    "Registrar",
-                    style: TextStyle(color: Colors.white),
+              Container(
+                child: ButtonTheme(
+                  height: 60.0,
+                  // minWidth: 20.0,
+                  buttonColor: Colors.white,
+                  child: ElevatedButton(
+                    onPressed: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => LoginPage()))
+                    },
+                    child: Text(
+                      "Registrar",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
