@@ -124,6 +124,7 @@ class _AbrirOsState extends State<AbrirOs> {
               Text("Comentário:"),
 
               Container(
+                width: 480,
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.grey),
                   borderRadius: BorderRadius.circular(0),
